@@ -1,0 +1,65 @@
+"" custom configurations
+
+" bundles configs
+"
+" Don't save hidden and unloaded buffers in sessions.
+set sessionoptions-=buffers
+
+" custom bundles configs
+let g:multi_cursor_use_default_mapping=0
+
+" Default mapping
+let g:multi_cursor_start_word_key      = '<C-n>'
+let g:multi_cursor_select_all_word_key = '<A-n>'
+let g:multi_cursor_start_key           = 'g<C-n>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-n>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+
+" golang customization
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+let g:go_auto_type_info = 1
+let g:go_auto_sameids = 0
+let g:go_def_mapping_enabled = 0
+
+" disable warnings
+" disable warnin to vim versin < 742
+let g:go_version_warning = 0
+let g:UltiSnipsNoPythonWarning = 1
+
+" custom configs
+"
+" general
+set noswapfile
+set updatetime=100
+
+" go
+au FileType go nmap <Leader>dh <Plug>(go-def)
+
+" backup
+set backup
+set backupdir=~/.vim/backup/
+set writebackup
+set backupcopy=yes
+au BufWritePre * let &bex = '_' . strftime("%y%m%d-%Hh%Mm%S")
+
+"fix a bug in new vim regex engine
+set regexpengine=1
+
+"test if lazyredraw is fast
+set lazyredraw
+
+"try new colors
+set nocompatible " be iMproved, required
+"filetype off " required
+" set Vim-specific sequences for RGB colors
+if v:version > 742
+    set termguicolors
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
+set background=dark

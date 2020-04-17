@@ -1,0 +1,16 @@
+" custom bundles
+" multiple cursors
+Plug 'terryma/vim-multiple-cursors'
+
+" try experiment vim-sensible
+Plug 'tpope/vim-sensible'
+
+"" try some colorscheme
+"Plug 'lifepillar/vim-solarized8'
+"Plug 'fatih/molokai'
+
+if has("gui_running") || has("gui_macvim") || has("mac")
+    " https://github.com/neoclide/coc.nvim
+    " Use release branch
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
