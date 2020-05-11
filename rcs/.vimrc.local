@@ -24,6 +24,7 @@ let g:go_info_mode='gopls'
 let g:go_auto_type_info = 1
 let g:go_auto_sameids = 0
 let g:go_def_mapping_enabled = 0
+let g:go_updatetime = 1500
 
 " disable warnings
 " disable warnin to vim versin < 742
