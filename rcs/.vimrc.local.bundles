@@ -12,3 +12,4 @@ Plug 'tpope/vim-sensible'
 " https://github.com/neoclide/coc.nvim
 " Use release branch
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+

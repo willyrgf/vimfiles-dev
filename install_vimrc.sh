@@ -37,6 +37,7 @@ _install() {
         return 1
     fi
 
+    vim +:PlugClean +q +q
     if ! vim +:PlugInstall +q +q && vim +:VimBootstrapUpdate +q +q; then
         echo "error on install vim plugins"
         return 1

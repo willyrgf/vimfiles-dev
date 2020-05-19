@@ -26,11 +26,6 @@ let g:go_auto_sameids = 0
 let g:go_def_mapping_enabled = 0
 let g:go_updatetime = 1500
 
-" disable warnings
-" disable warnin to vim versin < 742
-let g:go_version_warning = 0
-let g:UltiSnipsNoPythonWarning = 1
-
 " custom configs
 "
 " general
@@ -39,6 +34,12 @@ set updatetime=100
 
 " go
 au FileType go nmap <Leader>dh <Plug>(go-def)
+
+" python
+let g:ale_fix_on_save = 1
+let g:ale_linters = { 'python': [ 'flake8', 'pydocstyle', 'bandit', 'mypy' ] }
+let g:ale_fixers = { 'python': [ 'black', 'isort','remove_trailing_lines', 'trim_whitespace' ]}
+let g:ale_python_mypy_options = '--ignore-missing-imports'
 
 " backup
 set backup
