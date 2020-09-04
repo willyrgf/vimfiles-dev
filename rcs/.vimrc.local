@@ -65,3 +65,6 @@ if v:version > 742
 endif
 
 set background=dark
+
+" compatible
+let g:coc_disable_startup_warning = 1
