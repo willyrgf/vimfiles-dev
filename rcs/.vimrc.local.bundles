@@ -13,3 +13,6 @@ Plug 'tpope/vim-sensible'
 " Use release branch
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+
+" A plpgsql plug
+Plug 'lifepillar/pgsql.vim'
